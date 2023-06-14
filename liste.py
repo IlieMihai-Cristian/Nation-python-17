@@ -1,0 +1,26 @@
+salariu = []
+# print(type(salariu))
+salariu.append(2)
+salariu.append(4)
+salariu.append(5)
+salariu.append("a")
+salariu.append(['b', 4, 'x'])
+# print(salariu[2])
+# print(salariu[4][2])
+"""[2, 4, 5, 'a', ['b', 4, 'x']]"""
+# print(salariu[2:])
+# print(salariu[2:4])
+# print(salariu[2:5:2])
+# print(salariu[2::2])
+# print(salariu[6:7])
+# print(len(salariu))
+# salariu.clear()
+# salariu.pop(2)
+# del salariu
+# print(salariu[-1])
+# print(salariu[0])
+# salariu.insert(8, "A")
+# salariu.insert(2, "A")
+# salariu.append(4)
+salariu[1] = 'b'
+print(salariu)

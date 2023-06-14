@@ -34,3 +34,53 @@ venitsalariatpeora = 10
 # venit salariat = 12
 # 1venit_salariat = 12
 # (len, max, min, type, int, float, if, else, for, while, break)
+
+"""venitul saptamanal = venitul / ora * nr ore"""
+
+# venit_ora = float(input("Introduceti venitul pe ora: "))
+# nr_ore = int(input("Introdu numarul de ore: "))
+
+""" caz1 """
+# rezultat = venit_ora * nr_ore
+# print(rezultat)
+# print(f"Rezultatul este: \"{venit_ora * nr_ore}\"")
+# print(f"Rezultatul este: '{venit_ora * nr_ore}'")
+# print(f'Rezultatul este: \'{venit_ora * nr_ore}\'')
+# print(f'Rezultatul este: "{venit_ora * nr_ore}"')
+# print("Rezultatul este: {}".format(venit_ora * nr_ore))
+# print("Rezultatul venitului de {0} si al nr de ore {0} este: {1}".format(venit_ora, venit_ora * nr_ore))
+
+# print("Rezultatul venitului este: ", venit_ora + nr_ore, ".")
+# print(a)
+
+# a = str(2)
+# b = str(3)
+# c = a + b
+# print(c)
+
+# print(5 == 5)  # " = = "
+# print(5 != 5)  # " ! = "
+# print(5 >= 4)
+print(4 < 5 and 4 > 2)
+"""AND """
+""" 
+    true and true = true
+    true and false = false
+    false and true = false
+    false and false = false
+"""
+""" OR """
+"""
+    true or true = true
+    true or false = true
+    false or true = true
+    false or false = false
+"""
+
+"""not"""
+"""not true => false"""
+"""not false => true"""
+# print(1 in [1, 2, 3])
+# print(1 not in [1, 2, 3])
+# print("abe" in "abecedar")
+# print("abc" not in "abecedar")
