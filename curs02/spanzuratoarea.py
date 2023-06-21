@@ -8,7 +8,7 @@ nr_total_vieti = 7
 litere_incercate = set()  # aici stocam literele unice
 while nr_total_vieti >= 1: # atata timp cat nu am ramas fara vieti
     print(cuvant_de_ghicit)
-    litera = input("Alege o litera: ").lower() # il lasam pe utilizator sa aleaga o litera
+    litera = input("Alege o litera: ").lower()  # il lasam pe utilizator sa aleaga o litera
 
     cuvant_de_ghicit = list(cuvant_de_ghicit)
     if litera in cuvant:
@@ -21,17 +21,18 @@ while nr_total_vieti >= 1: # atata timp cat nu am ramas fara vieti
             print(f"Cuvantul era: {cuvant_de_ghicit}")
             break
     elif litera not in cuvant:
-        if litera in litere_incercate or not litera.isalpha() or len(
+        if litera not in litere_incercate or not litera.isalpha() or len(
                 litera) > 1:
             nr_total_vieti -= 1
+            if nr_total_vieti == 0:
+                print(f'Ai pierdut! Cuvantul era: {cuvant}')
+                break
             print(f'Mai ai {nr_total_vieti} incercari')
         litere_incercate.add(litera)
         if litera in litere_incercate or not litera.isalpha() or len(
                 litera) > 1:  # verificam daca litera a mai fost incercata si nu este cifra sau simbol si utilizatorul introduce mai mult de un caracter
-            print(f"Literele incercate sunt {','.join(litere_incercate)}")
+            print(f"Literele incercate sunt: {','.join(litere_incercate)}")
             cuvant_de_ghicit = ''.join(cuvant_de_ghicit)
-
-
             continue
 
     # print(cuvant_de_ghicit)
