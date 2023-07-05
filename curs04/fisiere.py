@@ -52,11 +52,45 @@ import csv
 #                 max_cp = int(row[3])
 #     print(min_cp, max_cp)
 
-new_cars = [
-    ['Dacia', 'Logan', 2005, 75],
-    ['Renault', 'Clio', 2005, 75]
-]
-with open('data_csv.csv', 'a') as csv_file:
-    csv_writer = csv.writer(csv_file, delimiter=',')
-    for new_car in new_cars:
-        csv_writer.writerow(new_car)
+# new_cars = [
+#     ['Dacia', 'Logan', 2005, 75],
+#     ['Renault', 'Clio', 2005, 75]
+# ]
+# with open('data_csv.csv', 'a') as csv_file:
+#     csv_writer = csv.writer(csv_file, delimiter=',')
+#     for new_car in new_cars:
+#         csv_writer.writerow(new_car)
+
+# def csv_reader():
+#     lista_elemente = []
+#     with open('categorii.csv','r+') as file:
+#         categori = csv.reader(file)
+#         for item in categori:
+#             lista_elemente.append(item)
+#     return lista_elemente
+#
+#
+# with open('categorii.csv', mode='a', newline='') as file:
+#     lista_elemente = csv_reader()
+#     print(lista_elemente)
+#     variabila_categorie = input("Adauga un nou element: ").lower()
+#     lista_elemente_noi = [i[0].lower() for i in lista_elemente]
+#     if variabila_categorie not in lista_elemente_noi:
+#         writer = csv.writer(file)
+#         writer.writerow([variabila_categorie])
+#     else:
+#         print('elementul deja exista')
+
+
+import datetime
+
+
+def verificare(an, luna, zi):
+    try:
+        datetime.datetime(int(an), int(luna), int(zi))
+        return True
+    except ValueError:
+        return False
+
+
+print(verificare(23, 2, 28))
