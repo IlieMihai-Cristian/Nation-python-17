@@ -93,3 +93,44 @@ def main():
 
 var = main()
 print(var)
+
+def citire():
+    try:
+        a = int(input('Prim: '))
+        b = int(input('Doi: '))
+        c = int(input('Trei: '))
+        return a, b, c
+    except ValueError:
+        print('Un numar este gresit, mai incearca o data')
+        citire()
+
+
+def impartire():
+    a, b, c = citire()
+    if b == 0 or c == 0:
+        return 0
+    elif a == b == c:
+        return a / b / c * 3
+    return a / b / c
+print(impartire())
+
+
+lista = [1, 2, 3, 4, 5, 6, 7]
+lista2 = list()
+for j in lista:
+    if j % 2 == 0:
+        lista2.append(j)
+        lista2.append(j * 2)
+    else:
+        lista2.append(j)
+print(lista2)
+
+
+list_example = [1, 1, 2, 3, 4, 4, 5, 1]
+first_list_length = 3
+result = ([1, 1, 2], [3, 4, 4, 5, 1])
+def separare(lista, nr):
+    lista_prim = lista[:nr]
+    lista_doi = lista[nr:]
+    return lista_prim, lista_doi
+print(separare(list_example, first_list_length))
