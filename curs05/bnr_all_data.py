@@ -11,6 +11,7 @@ driver.get('https://www.bnr.ro/files/xml/nbrfxrates2022.htm')
 table = driver.find_element(by=By.XPATH, value='//*[@id="Data_table"]')
 lista = table.text.split('\n')
 header_len = driver.find_element(by=By.XPATH, value='//*[@id="Data_table"]/table/thead/tr')
+
 header = header_len.text.split('\n')
 print(header)
 dictionar = {i: [] for i in header}
